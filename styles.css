@@ -7,10 +7,14 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f8fd;
-  color: #333;
   line-height: 1.6;
+  background-image: url('img/fondo-futurista.jpg'); 
+  background-size: cover;
+  background-position: center;
+  background-repeat:repeat;
+  background-attachment: fixed; 
 }
+
 html, body {
   height: 100%;
   margin: 0;
@@ -23,15 +27,11 @@ body::before {
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: url('img/fondo-futurista.jpg') no-repeat center center / cover;
-  filter: blur(8px);
-  opacity: 0.1;
-  z-index: -1;
-}
+  background: url('img/fondo5.jpg') no-repeat center center / cover;
+} 
 
 /* ========== HEADER & NAV ========== */
 header {
-  background-color: #ffffff;
   padding: 1rem 2rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
@@ -67,7 +67,6 @@ nav a:hover {
   align-items: center;
   text-align: center;
   padding: 2rem;
-  background-color: #fff;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -76,7 +75,7 @@ nav a:hover {
 
 .hero h1 {
   font-size: 2.5rem;
-  color: #4b4b4b;
+  color: #dbc4e4;
   margin-bottom: 1rem;
 }
 
@@ -84,14 +83,14 @@ nav a:hover {
   font-size: 1.2rem;
   max-width: 600px;
   margin-bottom: 2rem;
-  color: #666;
+  color: #dbc4e4;
 }
 
 .hero a {
-  text-decoration: none;
+  margin-left: 500px;
+  text-decoration:none;
   padding: 0.8rem 1.5rem;
   background-color: #a98aff;
-  color: #fff;
   border-radius: 8px;
   font-weight: bold;
   transition: background-color 0.3s ease;
@@ -101,22 +100,9 @@ nav a:hover {
   background-color: #8f6aff;
 }
 
-/* ========== BANNER IMAGE ========== */
-.banner-img {
-  width: 100%;
-  height: auto;
-  max-height: 400px;
-  object-fit: cover;
-  margin-bottom: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  animation: fadeInBanner 1s ease-in-out;
-}
-
 /* ========== PROYECTOS ========== */
 .proyectos {
   padding: 4rem 2rem;
-  background-color: #ffffff;
 }
 
 .proyectos h2 {
@@ -217,22 +203,21 @@ button {
 
 /*COLLAGE*/
 .intro-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: start;
-  gap: 40px;
+  display:contents;
+  align-items: flex-start;
+  justify-content: flex-start;
   padding: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
-/* Estilos para el collage */
 .collage-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px;
   gap: 10px;
   max-width: 400px;
+  flex-shrink: 0;
 }
 
 .collage-grid img {
@@ -273,10 +258,11 @@ button {
   grid-row: span 1;
 }
 
-/* Estilos para el texto de presentación */
+/* Estilo para el texto de presentación */
 .intro-text {
-  max-width: 500px;
-  padding-top: 20px;
+  max-width: 900px;
+  margin-left: 500px;
+  margin-top: -300px;
 }
 
 .intro-text h1 {
@@ -287,21 +273,4 @@ button {
 .intro-text p {
   font-size: 1.2rem;
   line-height: 1.6;
-}
-
-/* Responsividad para pantallas pequeñas */
-@media (max-width: 768px) {
-  .intro-section {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-  }
-
-  .collage-grid {
-    max-width: 100%;
-  }
-
-  .intro-text {
-    padding-top: 20px;
-  }
 }
