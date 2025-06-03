@@ -1,4 +1,4 @@
-/* ========== RESET & BASE ========== */
+/* ========== RESET & BASE ========== */ 
 * {
   margin: 0;
   padding: 0;
@@ -8,27 +8,16 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
-  background-image: url('img/fondo-futurista.jpg'); 
+  background-image: url('img/fondo5.jpg'); 
   background-size: cover;
   background-position: center;
-  background-repeat:repeat;
+  background-repeat: repeat;
   background-attachment: fixed; 
 }
 
 html, body {
   height: 100%;
-  margin: 0;
-  padding: 0;
 }
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('img/fondo5.jpg') no-repeat center center / cover;
-} 
 
 /* ========== HEADER & NAV ========== */
 header {
@@ -67,9 +56,6 @@ nav a:hover {
   align-items: center;
   text-align: center;
   padding: 2rem;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   min-height: 100vh;
 }
 
@@ -86,17 +72,18 @@ nav a:hover {
   color: #dbc4e4;
 }
 
-.hero a {
-  margin-left: 500px;
-  text-decoration:none;
+.hero a.boton-proyectos {
+  text-decoration: none;
   padding: 0.8rem 1.5rem;
   background-color: #a98aff;
   border-radius: 8px;
   font-weight: bold;
+  color: #fff;
   transition: background-color 0.3s ease;
+  margin-top: 1rem;
 }
 
-.hero a:hover {
+.hero a.boton-proyectos:hover {
   background-color: #8f6aff;
 }
 
@@ -145,9 +132,11 @@ nav a:hover {
   color: #a98aff;
   font-weight: bold;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .proyecto a:hover {
+  color: #7a5bc2;
   text-decoration: underline;
 }
 
@@ -201,9 +190,9 @@ button {
   transition: all 0.3s ease-in-out;
 }
 
-/*COLLAGE*/
-.intro-section {
-  display:contents;
+/* ========== COLLAGE ========== */
+.intro-seccion {
+  display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   padding: 40px;
@@ -232,7 +221,6 @@ button {
   transform: scale(1.05);
 }
 
-/* Distribución personalizada del collage */
 .collage-grid img:nth-child(1) {
   grid-column: span 2;
   grid-row: span 2;
@@ -258,19 +246,38 @@ button {
   grid-row: span 1;
 }
 
-/* Estilo para el texto de presentación */
 .intro-text {
-  max-width: 900px;
-  margin-left: 500px;
+  max-width: 600px;
+  margin-left: 400px;
   margin-top: -300px;
 }
 
 .intro-text h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  color: #dbc4e4;
 }
 
 .intro-text p {
   font-size: 1.2rem;
   line-height: 1.6;
+  color: #dbc4e4;
+}
+
+.boton-volver {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #b388ff;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 12px;
+  margin-top: 30px;
+  transition: background-color 0.3s ease;
+  position: absolute;
+  z-index: 10;
+}
+
+.boton-volver:hover {
+  background-color: #9a60ff;
 }
